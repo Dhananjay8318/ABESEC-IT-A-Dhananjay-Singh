@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f1f1;
+            font-family: Arial, sans-serif;
+        }
+
+        #main {
+            border: 5px solid black;
+            display: flex;
+            height: 100vh;
+            width: 700px;
+            background: white;
+        }
+
+        #con1 {
+            border-right: 2px solid black;
+            width: 250px;
+            background-color: #1f3651;
+            color: white;
+            padding: 20px;
+        }
+
+        #con1 img {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+            object-fit: cover;
+        }
+
+        #con1 h2 {
+            margin-top: 20px;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+
+        #con1 p, #con1 li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        #con2 {
+            flex: 1;
+            padding: 30px;
+        }
+
+        #con2 h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        #con2 h3 {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        #con2 h2 {
+            margin-top: 20px;
+            border-bottom: 2px solid #1f3651;
+            padding-bottom: 5px;
+            color: #1f3651;
+        }
+
+        #con2 ul {
+            margin: 10px 0 20px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="con1">
+            <img src="product2.webp" alt="Profile Photo">
+            
+            <h2>Contact</h2>
+            <p>📞 +918318256935</p>
+            <p>✉️ dhananjaydj94500@gmail.com</p>
+            <p>📍 Varanasi</p>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Project Management</li>
+                <li>Public Relations</li>
+                <li>Teamwork</li>
+            </ul>
+
+            <h2>Languages</h2>
+            <p>English (Fluent)</p>
+            <p>French (Fluent)</p>
+        </div>
+
+        <!-- Right column -->
+        <div id="con2">
+            <h1>RICHARD SANCHEZ</h1>
+            <h3>Marketing Manager</h3>
+
+            <h2>Profile</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut orci vel justo volutpat laoreet.</p>
+
+            <h2>Experience</h2>
+            <h4>Borcelle Studio (2030–Present)</h4>
+            <ul>
+                <li>Develop and execute marketing strategies</li>
+                <li>Lead and mentor a high-performing team</li>
+            </ul>
+
+            <h4>Fauget Studio (2025–2029)</h4>
+            <ul>
+                <li>Manage marketing budget</li>
+                <li>Oversee market research</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
