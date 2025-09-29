@@ -1,0 +1,66 @@
+<html>
+    <body>
+        <input type="text">
+        <button onclick="addtodo()">click here</button>
+    </body>
+    <script>
+        let ctr=1;
+        function Deletetask(index){
+            const elem=document.getElementById(index);
+            elem.parentNode.removeChild(elem);
+        }
+
+
+        function addtodo(){
+          const c=document.querySelector("input");
+          const a=c.value;
+          const d=document.createElement("div");
+          d.setAttribute("id",ctr);
+          
+          d.innerHTML="<div>"+a+'</div> <button onclick="Deletetask(' + ctr + ')">Delete</button>';
+          document.querySelector("body").appendChild(d)
+            ctr=ctr+1;
+        }
+    </script>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+<body>
+    <h1>Task</h1>
+    <input type="text" placeholder="Enter your task">
+    <button onclick="add()">Add task</button>
+
+    <script>
+        let count = 0;
+
+        function taskdelete(index) {
+            const elem = document.getElementById(index);
+            elem.parentNode.removeChild(elem);
+        }
+
+        function add() {
+            const input = document.querySelector("input");
+            const value = input.value.trim();
+
+            if (value === "") return; // Optional: ignore empty tasks
+
+            const taskId = "task" + count;
+            const store = document.createElement("div");
+            store.setAttribute("id", taskId);
+            store.innerHTML = 
+                value + ' <button onclick="taskdelete(\'' + taskId + '\')">Delete</button>';
+
+            document.body.appendChild(store);
+            input.value = "";
+            count++;
+        }
+    </script>
+</body>
+</html>
